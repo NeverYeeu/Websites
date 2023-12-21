@@ -6,8 +6,7 @@ let getWebsite = api[0].website;
 let countryBtns = $$('.nav-country > li');
 // Chuong trinh se chay khi moi duyet web
 function webStart(){
-	let getIndex = localStorage.getItem('indexLang');
-	$('.nav-country > li.choose-country').classList.remove('choose-country');
+	let getIndex = Math.floor(Math.random() * countryBtns.length);
 	countryBtns[getIndex].classList.add('choose-country');
 	let getName = countryBtns[getIndex].innerText.toLowerCase();
 	getArrayLanguage(getName)
@@ -20,7 +19,6 @@ function handleCountryBtn(){
 			btn.classList.add('choose-country');
 			let nameLanguage = btn.innerText.toLowerCase();
 			getArrayLanguage(nameLanguage);
-			localStorage.setItem('indexLang', index);
 		})
 	})
 }; handleCountryBtn();
