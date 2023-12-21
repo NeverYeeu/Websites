@@ -1,0 +1,15 @@
+@media only  screen and (max-width: 480px ){
+	.infor-wrap{
+		display: block;
+		width: 100%;
+	}
+	.infor-wrap .wrap_img{
+		width: 100%;
+	}
+	.list-genre{
+		display: none;
+	}
+	.genre-icon{display: block}
+	.open{display: block;}
+}
+	
